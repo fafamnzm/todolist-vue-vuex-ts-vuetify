@@ -1,7 +1,12 @@
 # todolist-vue-vuex-ts-vuetify
 
 This is a Todo list using Vue.js, Vuex (for state mangament) both in typescript
+
 And Vuetify for UI/UX
+
+Check the Todo tab, It calls the API once, and does the pagination on the client side
+
+If any suggestion or comments, let me know :)
 
 ## Project setup
 

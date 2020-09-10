@@ -1,12 +1,12 @@
 <template>
   <div>
-    <div class="options m-auto mt-5">
+    <div class="m-auto mt-5">
       <v-container>
         <v-row>
-          <v-col cols="2">
+          <v-col cols="0" md="1" lg="2">
             <v-spacer></v-spacer>
           </v-col>
-          <v-col cols="1">
+          <v-col cols="2" md="1">
             <v-select
               v-model="limit"
               :items="limitOptions"
@@ -16,15 +16,15 @@
               persistent-hint
             ></v-select>
           </v-col>
-          <v-col cols="5">
+          <v-col cols="3" md="5">
             <v-text-field v-model="newTodo.title" type="text"></v-text-field>
           </v-col>
-          <v-col cols="2">
+          <v-col cols="1" md="2">
             <v-btn color="deep-purple accent-4" dark @click="AddTodo()"
               >Add Todo</v-btn
             >
           </v-col>
-          <v-col cols="2">
+          <v-col cols="0" md="2">
             <v-spacer></v-spacer>
           </v-col>
         </v-row>
