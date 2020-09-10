@@ -1,12 +1,45 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view />
-  </div>
+  <v-app>
+    <v-app-bar app color="rgb(65, 184, 131)" dark>
+      <div class="d-flex align-center">
+        <v-btn text>
+          <v-img
+            alt="Fafa Image"
+            class="shrink mr-2"
+            contain
+            src="https://www.faramarz-monazami.com/wp-content/uploads/2019/05/cropped-Capture3-6.jpg"
+            transition="scale-transition"
+            width="40"
+            @click="GoToTheDevelopersPage"
+          />
+        </v-btn>
+      </div>
+
+      <v-spacer></v-spacer>
+      <Nav />
+    </v-app-bar>
+
+    <v-main>
+      <div id="app">
+        <router-view />
+      </div>
+    </v-main>
+  </v-app>
 </template>
+
+<script lang="ts">
+import { Component, Vue } from "vue-property-decorator"
+import Nav from "./views/Nav.vue"
+
+@Component({
+  components: { Nav }
+})
+export default class Todo extends Vue {
+  GoToTheDevelopersPage() {
+    window.location.href = "https://www.faramarz-monazami.com/"
+  }
+}
+</script>
 
 <style>
 #app {
